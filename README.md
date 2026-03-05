@@ -104,7 +104,24 @@ Mathematically, this combination of parameters dissolves the main diagonal of th
 
 ## Running the Simulation
 
-1. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-   python main.py
+First, install the necessary dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+You can execute the simulation using one of two methods:
+
+**1. Graphical Interface**
+Launch the interactive desktop application by running:
+
+```bash
+python app_gui.py
+```
+
+**2. Headless Simulation**
+Execute the core logic without a user interface for terminal output by running:
+
+```bash
+python main.py
+```
