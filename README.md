@@ -1,6 +1,6 @@
 # Macro-Sociological Stratification and Mobility Simulator
 
-This repository contains an agent-based model (ABM) developed in Python using the Mesa framework. Using more than 20 parameters found in the literature, it integrates human, social, and economic capital within a spatially explicit urban environment to explore policy-driven redistribution, spatial segregation, and intergenerational mobility. Through defined micro-level structural constraints, the simulation demonstrates how social stratification emerges and inequality reproduces across multiple demographic epochs.
+This repository contains an agent-based model (ABM) developed in Python using the Mesa framework. Using more than 20 parameters found in the literature, it integrates human, social, and economic capital within a spatially explicit urban environment to explore policy-driven redistribution, spatial segregation, and intergenerational mobility. Through defined micro-level structural constraints, the simulation demonstrates how social stratification emerges and inequality reproduces across multiple demographic epochs with various scenarios including real-life examples of the US, Turkey and Finland.
 
 ## Theoretical Framework
 
@@ -25,7 +25,6 @@ The simulation architecture operationalizes several foundational sociological an
 Agents generate income ($Y$) using a modified Cobb-Douglas production function, converting human and social inputs into economic output:
 
 $$Y = A \cdot (C_H)^\alpha \cdot (C_S)^\beta \cdot \epsilon$$
-$$Y = A \cdot (C_H)^\alpha \cdot (C_S)^\beta \cdot \epsilon$$
 
 Where $A$ is the base wage, $\alpha$ and $\beta$ are the output elasticities of human and social capital, and $\epsilon$ is a stochastic shock variable representing market variance.
 
@@ -33,7 +32,6 @@ Where $A$ is the base wage, $\alpha$ and $\beta$ are the output elasticities of 
 
 The probability ($p$) of two agents forming a network tie incorporates both spatial friction and homophily:
 
-$$p = \frac{1}{1 + e^{\gamma_1 d + \gamma_2 |C_i - C_j| - \gamma_0}}$$
 $$p = \frac{1}{1 + e^{\gamma_1 d + \gamma_2 |C_i - C_j| - \gamma_0}}$$
 
 Where $d$ is the Euclidean spatial distance, $C$ is the composite class index of the agent, $\gamma_1$ dictates spatial friction, and $\gamma_2$ dictates homophily preference.
