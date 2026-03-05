@@ -5,8 +5,8 @@ import matplotlib.pyplot as plt
 
 from model import UrbanEnvironment
 
-def run_mobility_simulation(scenario, generations=4, num_agents=500, width=20, height=20):
-    model = UrbanEnvironment(num_agents=num_agents, width=width, height=height, scenario=scenario)
+def run_mobility_simulation(scenario, generations=4, num_agents=500, width=20, height=20, **kwargs):
+    model = UrbanEnvironment(num_agents=num_agents, width=width, height=height, scenario=scenario, **kwargs)
     terminal_wealth_records = []
     
     total_ticks = generations * model.max_lifespan
