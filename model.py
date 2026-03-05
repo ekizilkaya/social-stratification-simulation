@@ -7,7 +7,7 @@ from agents import StratificationAgent
 from metrics import compute_gini, compute_spatial_segregation, compute_mean_human_capital
 
 class UrbanEnvironment(mesa.Model):
-    def __init__(self, num_agents, width, height, scenario="United States"):
+    def __init__(self, num_agents, width, height, scenario="United States", **kwargs):
         super().__init__()
         self.num_agents = num_agents
         self.grid = mesa.space.MultiGrid(width, height, torus=False)
@@ -36,6 +36,10 @@ class UrbanEnvironment(mesa.Model):
         
         # Inject scenario-specific parameters
         self.set_scenario_parameters(scenario)
+
+        # Override with custom parameters
+        for key, value in kwargs.items():
+            setattr(self, key, value)
         
         self.neighborhood_quality = np.random.uniform(0.5, 1.5, (width, height))
         self.initialize_agents()
