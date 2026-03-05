@@ -1,5 +1,9 @@
 # Macro-Sociological Stratification and Mobility Simulator
 
+<p align="center">
+  <img src="assets/screenshot%20of%20stratification%20simulator%20ui.png" alt="Social Stratification Simulator UI" width="800">
+</p>
+
 This repository contains an agent-based model (ABM) developed in Python using the Mesa framework. Using more than 20 parameters found in the literature, it integrates human, social, and economic capital within a spatially explicit urban environment to explore policy-driven redistribution, spatial segregation, and intergenerational mobility. Through defined micro-level structural constraints, the simulation demonstrates how social stratification emerges and inequality reproduces across multiple demographic epochs with various scenarios including real-life examples of the US, Turkey and Finland.
 
 ## Theoretical Framework
