@@ -18,14 +18,14 @@ The simulation relies on specific mathematical functions to drive agent behavior
 ### Income Generation Function
 Agents generate income (Y) using a modified Cobb-Douglas production function, converting human and social inputs into economic output:
 
-Y = A * (C_H)^alpha * (C_S)^beta * epsilon
+$$Y = A \cdot (C_H)^\alpha \cdot (C_S)^\beta \cdot \epsilon$$
 
 Where A is the base wage, alpha and beta are the output elasticities of human and social capital, and epsilon is a stochastic shock variable representing market variance.
 
 ### Network Tie Formation
 The probability (p) of two agents forming a network tie incorporates both spatial friction and homophily:
 
-p = 1 / (1 + exp(gamma_1 * d + gamma_2 * |C_i - C_j| - gamma_0))
+$$p = \frac{1}{1 + e^{\gamma_1 d + \gamma_2 |C_i - C_j| - \gamma_0}}$$
 
 Where d is the Euclidean spatial distance, C is the composite class index of the agent, gamma_1 dictates spatial friction, and gamma_2 dictates homophily preference.
 
